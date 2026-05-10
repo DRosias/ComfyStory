@@ -20,6 +20,8 @@ import net.swordie.ms.enums.QuestStatus;
 import net.swordie.ms.loaders.ItemData;
 import net.swordie.ms.loaders.QuestData;
 import net.swordie.ms.loaders.containerclasses.QuestInfo;
+import net.swordie.ms.client.character.modules.InventoryModule;
+import net.swordie.ms.client.character.quest.progress.QuestProgressItemRequirement;
 import net.swordie.ms.util.FileTime;
 import net.swordie.ms.world.field.Field;
 import net.swordie.orm.dao.QuestDao;
@@ -240,6 +242,18 @@ public class QuestManager {
             if (items.size() != 0 && !chr.canHold(items)) {
                 chr.chatMessage("Your inventory is full. Please make more space before trying to complete this quest.");
                 return false;
+            }
+
+            // Consume quest item requirements before giving rewards.
+            for (var qpr : questInfo.getQuestProgressRequirements()) {
+                if (qpr instanceof QuestProgressItemRequirement) {
+                    QuestProgressItemRequirement ipr = (QuestProgressItemRequirement) qpr;
+                    int itemId = ipr.getItemID();
+                    int reqCount = ipr.getRequiredCount() == null ? 0 : ipr.getRequiredCount();
+                    if (reqCount > 0) {
+                        InventoryModule.removeItem(chr, itemId, reqCount);
+                    }
+                }
             }
 
             for (QuestReward qr : questInfo.getQuestRewards()) {
