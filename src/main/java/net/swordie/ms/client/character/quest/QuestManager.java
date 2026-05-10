@@ -250,16 +250,13 @@ public class QuestManager {
                     int itemId = ipr.getItemID();
                     int reqCount = ipr.getRequiredCount() == null ? 0 : ipr.getRequiredCount();
                     if (reqCount > 0) {
-                        // Use the ScriptManager consumeItem helper so the player sees a consumption message
                         try {
                             if (chr.getScriptManager() != null) {
                                 chr.getScriptManager().consumeItem(itemId, reqCount);
                             } else {
-                                // Fallback to direct removal if script manager is unexpectedly null
                                 chr.consumeItem(itemId, reqCount);
                             }
                         } catch (Exception e) {
-                            // Ensure we still remove the items even if sending the message fails
                             chr.consumeItem(itemId, reqCount);
                         }
                     }
