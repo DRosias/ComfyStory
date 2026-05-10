@@ -20,7 +20,6 @@ import net.swordie.ms.enums.QuestStatus;
 import net.swordie.ms.loaders.ItemData;
 import net.swordie.ms.loaders.QuestData;
 import net.swordie.ms.loaders.containerclasses.QuestInfo;
-import net.swordie.ms.client.character.modules.InventoryModule;
 import net.swordie.ms.client.character.quest.progress.QuestProgressItemRequirement;
 import net.swordie.ms.util.FileTime;
 import net.swordie.ms.world.field.Field;
@@ -251,7 +250,18 @@ public class QuestManager {
                     int itemId = ipr.getItemID();
                     int reqCount = ipr.getRequiredCount() == null ? 0 : ipr.getRequiredCount();
                     if (reqCount > 0) {
-                        InventoryModule.removeItem(chr, itemId, reqCount);
+                        // Use the ScriptManager consumeItem helper so the player sees a consumption message
+                        try {
+                            if (chr.getScriptManager() != null) {
+                                chr.getScriptManager().consumeItem(itemId, reqCount);
+                            } else {
+                                // Fallback to direct removal if script manager is unexpectedly null
+                                chr.consumeItem(itemId, reqCount);
+                            }
+                        } catch (Exception e) {
+                            // Ensure we still remove the items even if sending the message fails
+                            chr.consumeItem(itemId, reqCount);
+                        }
                     }
                 }
             }
