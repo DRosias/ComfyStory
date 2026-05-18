@@ -386,6 +386,7 @@ public class MobSkillModule {
 
         if (MobConstants.isDamien(mob.getTemplateId())) {
             field.broadcastPacket(MobPool.demianDelayedAttackCreate(mob, msi.getSkillId(), msi.getLevel(), msi));
+            mob.teleport(newPos, skillAfter);
             return;
         }
         if (MobConstants.isZakumBody(mob.getTemplateId())) {

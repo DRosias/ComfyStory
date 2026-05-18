@@ -373,7 +373,7 @@ public class ExpIncreaseInfo {
         outPacket.encodeByte(isLastHit());
         outPacket.encodeLong(getIncEXP());
         outPacket.encodeByte(isOnQuest());
-        outPacket.encodeLong(getQuestBonusRemainCount());
+        outPacket.encodeInt(getQuestBonusRemainCount());
 
         long mask = getMask();
         outPacket.encodeLong(mask);
@@ -503,6 +503,5 @@ public class ExpIncreaseInfo {
         if ((mask & AccumulatedHuntBonusExp.getVal()) != 0) {
             outPacket.encodeInt(17);
         }
-
     }
 }
