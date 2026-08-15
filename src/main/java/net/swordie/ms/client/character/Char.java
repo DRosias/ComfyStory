@@ -1,6 +1,7 @@
 package net.swordie.ms.client.character;
 
 import net.swordie.ms.Server;
+import net.swordie.ms.ServerConfig;
 import net.swordie.ms.client.Account;
 import net.swordie.ms.client.Client;
 import net.swordie.ms.client.LinkSkill;
@@ -5798,7 +5799,8 @@ public class Char {
     public void addNx(int nx) {
         account.addNXPrepaid(nx);
         if (nx != 0) {
-            write(UserPacket.progressMessageFont(ProgressMessageFontType.Normal, 16, ProgressMessageColourType.White, 300, String.format("You have gained %,d NX.", nx)));
+            int awardedNx = ServerConfig.applyCashRewardMultiplier(nx);
+            write(UserPacket.progressMessageFont(ProgressMessageFontType.Normal, 16, ProgressMessageColourType.White, 300, String.format("You have gained %,d NX.", awardedNx)));
             write(WvsContext.setMaplePoints(account.getNxPrepaid()));
         }
     }

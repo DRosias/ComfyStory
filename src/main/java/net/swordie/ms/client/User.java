@@ -1,6 +1,7 @@
 package net.swordie.ms.client;
 
 import net.swordie.ms.Server;
+import net.swordie.ms.ServerConfig;
 import net.swordie.ms.ServerConstants;
 import net.swordie.ms.client.anticheat.OffenseManager;
 import net.swordie.ms.client.character.Char;
@@ -195,9 +196,13 @@ public class User {
 
 
     public void addMaplePoints(int points) {
-        int newPoints = getMaplePoints() + points;
+        points = ServerConfig.applyCashRewardMultiplier(points);
+        long newPoints = (long) getMaplePoints() + points;
+        if (newPoints > Integer.MAX_VALUE) {
+            newPoints = Integer.MAX_VALUE;
+        }
         if (newPoints >= 0) {
-            setMaplePoints(newPoints);
+            setMaplePoints((int) newPoints);
         }
     }
 

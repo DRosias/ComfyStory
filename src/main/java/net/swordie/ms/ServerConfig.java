@@ -14,5 +14,13 @@ public class ServerConfig {
     public static final String RECOMMEND_MSG = "I recommend this world to you.";
     public static final int MAX_CHARACTERS = 30;
     public static final String HEAP_DUMP_DIR = "../heapdumps";
+    public static final int CASH_REWARD_MULTIPLIER = 2;
+
+    public static int applyCashRewardMultiplier(int amount) {
+        if (amount <= 0) {
+            return amount;
+        }
+        return (int) Math.min((long) amount * CASH_REWARD_MULTIPLIER, Integer.MAX_VALUE);
+    }
 
 }

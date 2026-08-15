@@ -1,6 +1,7 @@
 package net.swordie.ms.client;
 
 import net.swordie.ms.Server;
+import net.swordie.ms.ServerConfig;
 import net.swordie.ms.client.blacklist.BlackListEntry;
 import net.swordie.ms.client.blacklist.BlackListModule;
 import net.swordie.ms.client.character.Char;
@@ -257,6 +258,7 @@ public class Account {
     }
 
     public void addNXPrepaid(int prepaid) {
+        prepaid = ServerConfig.applyCashRewardMultiplier(prepaid);
         long newPrepaid = (long) getNxPrepaid() + prepaid;
         if (newPrepaid > Integer.MAX_VALUE) {
             newPrepaid = Integer.MAX_VALUE;
@@ -308,9 +310,13 @@ public class Account {
     }
 
     public void addNXCredit(int credit) {
-        int newCredit = getNxCredit() + credit;
+        credit = ServerConfig.applyCashRewardMultiplier(credit);
+        long newCredit = (long) getNxCredit() + credit;
+        if (newCredit > Integer.MAX_VALUE) {
+            newCredit = Integer.MAX_VALUE;
+        }
         if (newCredit >= 0) {
-            setNxCredit(newCredit);
+            setNxCredit((int) newCredit);
         }
     }
 

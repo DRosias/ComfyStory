@@ -2428,7 +2428,7 @@ public class ScriptManagerImpl implements ScriptManager {
         if (qm.canStartQuest(id)) {
             qm.addQuest(QuestData.createQuestFromId(id));
         } else {
-            chr.chatMessage("You don't fit the requirements to start this quest, if you think this is unintended, please report this to the Bug-reports channel in the discord.");
+            chr.chatMessage("You don't fit the requirements to start this quest. If you think this is unintended, please contact a staff member.");
         }
     }
 

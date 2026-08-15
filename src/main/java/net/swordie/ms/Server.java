@@ -43,8 +43,6 @@ import org.apache.logging.log4j.Logger;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -168,9 +166,6 @@ public class Server extends Properties {
 		log.info(String.format("Finished loading server in %dms. Version: %s.%s", System.currentTimeMillis() - startNow, ServerConstants.VERSION, ServerConstants.MINOR_VERSION));
 
 		setStartedTime(LocalDateTime.now());
-
-		// must be after webApi finished
-		notifySworDiscord();
 	}
 
 	private void loadAndAddWorlds() {
@@ -181,23 +176,6 @@ public class Server extends Properties {
 				var world = cfg.toWorld();
 				worldList.add(world);
 			}
-		}
-	}
-
-	private void notifySworDiscord() {
-		try {
-			URL url = new URL("http://127.0.0.1:5000/restart");
-			HttpURLConnection con = (HttpURLConnection) url.openConnection();
-			con.setRequestMethod("GET");
-			var response = new BufferedReader(new InputStreamReader(con.getInputStream())).readLine();
-			if (response.equalsIgnoreCase("Ack")) {
-				log.info("SworDiscord Acknowledged The Server Restart");
-			} else {
-				log.info("SworDiscord Could Not Acknowledge The Server Restart");
-			}
-			con.disconnect();
-		} catch (IOException e) {
-			log.info("SworDiscord Could Not Acknowledge The Server Restart");
 		}
 	}
 

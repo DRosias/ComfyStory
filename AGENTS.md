@@ -21,18 +21,9 @@ Stability and broad class playability are important.
 
 Assume players may use any implemented class.
 
-When modifying shared systems, consider their impact across classes and content.
+When modifying shared systems, consider their impact across classes, content, and existing game systems.
 
-Avoid regressions to existing functionality such as:
-
-- character creation and progression
-- class skills and combat
-- saving/loading and database persistence
-- inventory and equipment
-- quests and NPCs
-- shops and Cash Shop
-- parties and social systems
-- bosses and other game content
+Avoid regressions to existing functionality that is unrelated to the requested change.
 
 Prefer configuration, scripts, data definitions, or existing hooks over invasive engine changes when they are suitable for the requested change.
 
