@@ -8,9 +8,9 @@ import java.sql.SQLException;
 
 public class HikariCPDataSource {
 
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/swordie232";
+    private static final String URL = "jdbc:mysql://127.0.0.1:3307/comfystory232";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = System.getenv("COMFYSTORY_DB_PASSWORD");
 
     private static HikariConfig config = new HikariConfig();
     private static HikariDataSource ds;
@@ -38,3 +38,4 @@ public class HikariCPDataSource {
 
     private HikariCPDataSource(){}
 }
+
