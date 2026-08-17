@@ -46,6 +46,6 @@ def JumpQuestReward():
 
 
 #------------------------------------------------------------------------
-selection = sm.sendNext("Hello, #h # \r\nI hope you're enjoying swordie! \r\n#L0#I would like to receive my jump quest reward #l")
+selection = sm.sendNext("Hello, #h # \r\nI hope you're enjoying ComfyStory! \r\n#L0#I would like to receive my jump quest reward #l")
 if selection == 0:
     JumpQuestReward()

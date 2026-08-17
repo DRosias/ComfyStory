@@ -2706,7 +2706,7 @@ public abstract class Job {
                 message += "You've reached level 10, and are ready for your #b[1st Job Advancement]#k!\r\n\r\n";
                 message += "Complete the #r[Job Advancement]#k quest and unlock your 1st job advancement!\r\n";
                 chr.write(UserLocal.addPopupSay(9010000, 6000, message, "FarmSE.img/boxResult"));
-                chr.addFirstEnterReward(new FirstEnterReward(chr.getId(), 2436226, 1, FirstEnterRewardType.GameItem, "Thanks to Swordie team and community.")); // Maple Admin's Heartfelt Gift
+                chr.addFirstEnterReward(new FirstEnterReward(chr.getId(), 2436226, 1, FirstEnterRewardType.GameItem, "Thanks to the Swordie team and community, whose work is the foundation for ComfyStory.")); // Maple Admin's Heartfelt Gift
                 break;
             }
             case 20: {

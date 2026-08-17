@@ -12,24 +12,24 @@ public class UserModule {
     private static final String EMAIL = "examplemail@gmail.com";
     private static final String EMAIL_PASSWORD = "example_password"; // App password
 
-    private static final String PASSWORD_RESET_EMAIL_SUBJECT = "Swordie password reset";
+    private static final String PASSWORD_RESET_EMAIL_SUBJECT = "ComfyStory password reset unavailable";
     private static final String PASSWORD_RESET_EMAIL_CONTENT = "Hello %s, <br /><br />" +
-            "Your password has been reset, you can create a new password by going to <a href=\"https://www.swordie.net/reset-password?username=%s&token=%s\">this link</a>.<br /><br />" +
-            "If you did not perform this action, please make sure that no one else but you has access to your account.<br /><br />" +
+            "Password resets are not available for ComfyStory at this time. This email does not change your password and does not provide a reset link.<br /><br />" +
+            "Please contact the server administrator for account help.<br /><br />" +
             "Please do not reply to this email, as this is a generated email. Any responses will be ignored.<br /><br />" +
             "Kind regards," +
             "<br /><br />" +
-            "The Swordie team";
+            "The ComfyStory team";
 
-    private static final String USERNAME_EMAIL_SUBJECT = "Swordie username";
-    private static final String USERNAME_EMAIL_CONTENT = "Hello Swordie player,<br /><br />" +
+    private static final String USERNAME_EMAIL_SUBJECT = "ComfyStory username";
+    private static final String USERNAME_EMAIL_CONTENT = "Hello ComfyStory player,<br /><br />" +
             "Your username is as follows:<br /><br />" +
             "<b>%s</b> <br /><br />" +
             "If you did not perform this action, please make sure that no one else but you has access to your account.<br /><br />" +
             "Please do not reply to this email, as this is a generated email. Any responses will be ignored.<br /><br />" +
             "Kind regards," +
             "<br /><br />" +
-            "The Swordie team";
+            "The ComfyStory team";
 
     /**
      <site key> | Use this site key in the HTML code your site serves to users.
@@ -47,7 +47,7 @@ public class UserModule {
     };
 
     public static void sendPasswordResetEmail(User user) {
-        sendEmail(user, PASSWORD_RESET_EMAIL_SUBJECT, String.format(PASSWORD_RESET_EMAIL_CONTENT, user.getName(), user.getName(), user.getResetKey()));
+        sendEmail(user, PASSWORD_RESET_EMAIL_SUBJECT, String.format(PASSWORD_RESET_EMAIL_CONTENT, user.getName()));
     }
 
     public static void sendUsernameEmail(User user) {

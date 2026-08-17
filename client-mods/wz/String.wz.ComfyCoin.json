@@ -1,0 +1,9 @@
+{
+  "source": "resources/Data.wz",
+  "sourceSha256": "8BFDC1EE0C32846D9210F25A25A7E7604325C9A0D505DC542AC7C5C5BCB00DD2",
+  "targetProperty": "String/Etc.img/Etc/4310096/name",
+  "oldValue": "Swordie Coin",
+  "newValue": "Comfy Coin",
+  "applyScript": "client-mods/wz/Apply-StringWzTextMod.ps1",
+  "intentionalUnchangedText": "Arcane Umbra Two-handed Swordie"
+}

@@ -8,7 +8,7 @@ if sm.getEmptyInventorySlots(InvType.ETC) == 0:
 
 dmg = chr.getPolloFritto()  # damage done
 amount = GameConstants.randomPortalInfernoWolfCoinFormula(dmg)  # coins obtained based on the formula
-coin_id = ItemConstants.SWORDIE_COIN  # Swordie Coin Template Id
+coin_id = ItemConstants.SWORDIE_COIN  # Comfy Coin Template Id
 
 sm.sendNext("Nice work out there, soldier!")
 chr.resetPolloFritto()

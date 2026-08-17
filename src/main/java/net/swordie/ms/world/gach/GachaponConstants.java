@@ -23,28 +23,28 @@ public class GachaponConstants {
         initEquipment();
         List<GachaponInfo.GachItem> items;
         // Town Gachapon
-        String[] messages = new String[]{"Swordie Town Gachapon", "Text 1", "Text 2"};
+        String[] messages = new String[]{"ComfyStory Town Gachapon", "Text 1", "Text 2"};
         items = new ArrayList<>(equipments);
         items.addAll(nebulites);
         gachaponInfo.put(GachaponDlgType.TOWN, new GachaponInfo(Arrays.asList(messages), items));
 
         // Nebulite Gachapon
-        messages = new String[]{"Swordie Nebulite Gachapon", "Text 1", "Text 2"};
+        messages = new String[]{"ComfyStory Nebulite Gachapon", "Text 1", "Text 2"};
         items = new ArrayList<>(nebulites);
         gachaponInfo.put(GachaponDlgType.NEBULITE, new GachaponInfo(Arrays.asList(messages), items));
 
         // Chair Gachapon
-        messages = new String[]{"Swordie Chair Gachapon", "Text 1", "Text 2"};
+        messages = new String[]{"ComfyStory Chair Gachapon", "Text 1", "Text 2"};
         items = new ArrayList<>();
         gachaponInfo.put(GachaponDlgType.CHAIR, new GachaponInfo(Arrays.asList(messages), items));
 
         // Mount Gachapon
-        messages = new String[]{"Swordie Mount Gachapon", "Text 1", "Text 2"};
+        messages = new String[]{"ComfyStory Mount Gachapon", "Text 1", "Text 2"};
         items = new ArrayList<>();
         gachaponInfo.put(GachaponDlgType.MOUNT, new GachaponInfo(Arrays.asList(messages), items));
 
         // Special Gachapon
-        messages = new String[]{"Swordie Special Gachapon", "Text 1", "Text 2"};
+        messages = new String[]{"ComfyStory Special Gachapon", "Text 1", "Text 2"};
         items = new ArrayList<>();
         gachaponInfo.put(GachaponDlgType.SPECIAL, new GachaponInfo(Arrays.asList(messages), items));
     }

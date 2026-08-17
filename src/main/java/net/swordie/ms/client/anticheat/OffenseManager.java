@@ -400,9 +400,9 @@ public class OffenseManager {
         var quantity = Util.getRandom(2, 4);
         if (chr.canHold(ItemConstants.SWORDIE_COIN, quantity)) {
             chr.addItemToInventory(ItemConstants.SWORDIE_COIN, quantity);
-            chr.chatMessage("You have been given some Swordie Coins as reward for passing the lie detector test! (%d)", quantity);
+            chr.chatMessage("You have been given some Comfy Coins as reward for passing the lie detector test! (%d)", quantity);
         } else {
-            chr.chatMessage("You don't have enough space for the Swordie Coin reward from passing the lie detector test.");
+            chr.chatMessage("You don't have enough space for the Comfy Coin reward from passing the lie detector test.");
         }
     }
 

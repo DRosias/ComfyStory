@@ -20,6 +20,6 @@ if sm.canHold(1712003):
     sm.completeQuest(34330)
     sm.startQuest(34331)
     sm.completeQuestNoCheck(34331)
-    sm.sendSay("#rDue to Swordie custom changes you don't need to Kill Easy Lucid, you can continue with Arcana once you reach level 225.")
+    sm.sendSay("#rDue to ComfyStory custom changes you don't need to Kill Easy Lucid, you can continue with Arcana once you reach level 225.")
 else:
     sm.sendNext("Please make room in your EQUIP inventory. I have something very important to give you.")

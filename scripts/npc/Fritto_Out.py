@@ -8,7 +8,7 @@ if sm.getEmptyInventorySlots(InvType.ETC) == 0:
 
 value = chr.getPolloFritto()  # portals succeeded
 amount = GameConstants.randomPortalFrittoCoinFormula(value)  # coins obtained based on the formula
-coin_id = ItemConstants.SWORDIE_COIN  # Swordie Coin Template Id
+coin_id = ItemConstants.SWORDIE_COIN  # Comfy Coin Template Id
 
 sm.sendNext("Great job, that was a lot of fun!")
 chr.resetPolloFritto()

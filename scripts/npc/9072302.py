@@ -15,7 +15,7 @@ options = ["I want to go somewhere",
            "Vote for the server"]
 
 options2 = ["Town Maps","Monster Maps","Boss Entrances","Free Market"]
-options3 = ["Regular Shop", "Swordie Shop", "Legion Shop"]
+options3 = ["Regular Shop", "Comfy Shop", "Legion Shop"]
 options4 = ["Trade Golden Maple Leaf for mesos",
             "Trade mesos for Golden Maple Leaf",
             "Trade Maple Leaf Gold for NX cash",
@@ -112,7 +112,7 @@ elif option == 1:
     if ans3 == 0:
         sm.openShop(9001212)  # Regular Shop
     elif ans3 == 1:
-        sm.openShop(9062231)  # Swordie Shop
+        sm.openShop(9062231)  # Comfy Shop
     elif ans3 == 2:
         sm.openShop(9010111)  # Legion Shop
 

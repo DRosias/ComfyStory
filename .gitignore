@@ -3,6 +3,8 @@
 SwordieMS.iml
 WZ/
 wz/
+!client-mods/wz/
+!client-mods/wz/**
 wzdat/
 info txts/
 dat/
