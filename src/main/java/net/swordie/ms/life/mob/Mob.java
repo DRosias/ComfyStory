@@ -690,30 +690,33 @@ public class Mob extends Life {
         Map<Party, PartyDamageInfo> damagePercPerParty = new HashMap<>();
         for (Char chr : getDamageDone().keySet()) {
             double damagePerc = getDamageDone().get(chr) / (double) totalDamage;
-            int mobExpRate = chr.getCurrentLevelExpRate();
-            long appliedExpPre = (long) (exp * damagePerc * mobExpRate);
+            double mobExpRate = chr.getCurrentLevelExpRate();
+            long appliedExpPre = MobExpConstants.scaleExpSafely(exp, damagePerc * mobExpRate);
             long appliedExpPost = appliedExpPre;
             ExpIncreaseInfo eei = new ExpIncreaseInfo();
 
             // Burning Field
             if (getField().getBurningFieldLevel() > 0) {
-                int burningFieldBonusExp = (int) (appliedExpPre * getField().getBonusExpByBurningFieldLevel() / 100);
-                eei.setRestFieldBonusExp(burningFieldBonusExp);
+                long burningFieldBonusExp = MobExpConstants.scaleExpSafely(
+                    appliedExpPre,
+                    getField().getBonusExpByBurningFieldLevel() / 100D
+                );
+                eei.setRestFieldBonusExp(Util.maxInt(burningFieldBonusExp));
                 eei.setRestFieldExpRate(getField().getBonusExpByBurningFieldLevel());
-                appliedExpPost += burningFieldBonusExp;
+                appliedExpPost = MobExpConstants.addExpSafely(appliedExpPost, burningFieldBonusExp);
             }
 
             // + Exp% MobStats
             if (getTemporaryStat().hasCurrentMobStat(MobStat.Treasure) && getTemporaryStat().getCurrentOptionsByMobStat(MobStat.Treasure).xOption > 0) { // xOption for Exp%
                 int expIncrease = getTemporaryStat().getCurrentOptionsByMobStat(MobStat.Treasure).xOption;
-                long mobStatBonusExp = ((appliedExpPre * expIncrease) / 100);
-                eei.setBaseAddExp((int) mobStatBonusExp);
-                appliedExpPost += mobStatBonusExp;
+                long mobStatBonusExp = MobExpConstants.scaleExpSafely(appliedExpPre, expIncrease / 100D);
+                eei.setBaseAddExp(Util.maxInt(mobStatBonusExp));
+                appliedExpPost = MobExpConstants.addExpSafely(appliedExpPost, mobStatBonusExp);
             }
 
             // Rune anti-bot multi
             var runeCurseMulti = RuneStoneFieldModule.getRuneCurseMultiplier(chr, getField()) / 100D;
-            appliedExpPost *= runeCurseMulti;
+            appliedExpPost = MobExpConstants.scaleExpSafely(appliedExpPost, runeCurseMulti);
 
             if (runeCurseMulti < 1D) {
                 getField().getRuneStone().showRuneCurseMessageToChr(chr);

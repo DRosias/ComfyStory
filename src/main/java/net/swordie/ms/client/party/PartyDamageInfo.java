@@ -3,6 +3,7 @@ package net.swordie.ms.client.party;
 import net.swordie.ms.client.character.Char;
 import net.swordie.ms.client.character.info.ExpIncreaseInfo;
 import net.swordie.ms.constants.GameConstants;
+import net.swordie.ms.constants.MobExpConstants;
 import net.swordie.ms.life.mob.Mob;
 import net.swordie.ms.util.Util;
 import net.swordie.ms.world.field.modules.RuneStoneFieldModule;
@@ -54,12 +55,15 @@ public class PartyDamageInfo {
         int nxDropAmount = (int) (mob.getNxDropAmount() * runeMulti);
 
         for (Char chr : eligibleMembers) {
-            long exp = (long) (totalExp * (0.2 * damageDone.getOrDefault(chr, 0D)
-                                + 0.8 * chr.getLevel() / chr.getParty().getAvgPartyLevel(chr)));
+            long exp = MobExpConstants.scaleExpSafely(
+                totalExp,
+                0.2 * damageDone.getOrDefault(chr, 0D)
+                    + 0.8 * chr.getLevel() / chr.getParty().getAvgPartyLevel(chr)
+            );
             double perc = (double) exp / totalExp;
-            exp *= expRate;
-            exp *= runeMulti;
-            exp *= chr.getCurrentLevelExpRate();
+            exp = MobExpConstants.scaleExpSafely(exp, expRate);
+            exp = MobExpConstants.scaleExpSafely(exp, runeMulti);
+            exp = MobExpConstants.scaleExpSafely(exp, chr.getCurrentLevelExpRate());
 
             ExpIncreaseInfo eii = new ExpIncreaseInfo();
             if (!damageDone.containsKey(chr)) {

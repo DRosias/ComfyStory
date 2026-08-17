@@ -1,0 +1,301 @@
+﻿level,exp_required_to_next_level,swordie_rule,source
+1,15,hardcoded,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+2,34,hardcoded,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+3,57,hardcoded,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+4,92,hardcoded,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+5,135,hardcoded,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+6,372,hardcoded,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+7,560,hardcoded,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+8,840,hardcoded,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+9,1242,hardcoded,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+10,1242,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+11,1242,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+12,1242,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+13,1242,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+14,1242,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+15,1490,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+16,1788,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+17,2145,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+18,2574,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+19,3088,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+20,3705,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+21,4446,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+22,5335,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+23,6402,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+24,7682,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+25,9218,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+26,11061,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+27,13273,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+28,15927,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+29,19112,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+30,19112,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+31,19112,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+32,19112,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+33,19112,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+34,19112,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+35,22934,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+36,27520,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+37,33024,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+38,39628,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+39,47553,previous * 1.20,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+40,51357,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+41,55465,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+42,59902,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+43,64694,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+44,69869,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+45,75458,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+46,81494,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+47,88013,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+48,95054,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+49,102658,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+50,110870,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+51,119739,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+52,129318,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+53,139663,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+54,150836,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+55,162902,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+56,175934,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+57,190008,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+58,205208,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+59,221624,previous * 1.08,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+60,221624,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+61,221624,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+62,221624,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+63,221624,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+64,221624,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+65,238245,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+66,256113,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+67,275321,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+68,295970,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+69,318167,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+70,342029,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+71,367681,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+72,395257,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+73,424901,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+74,456768,previous * 1.075,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+75,488741,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+76,522952,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+77,559558,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+78,598727,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+79,640637,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+80,685481,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+81,733464,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+82,784806,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+83,839742,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+84,898523,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+85,961419,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+86,1028718,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+87,1100728,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+88,1177778,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+89,1260222,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+90,1342136,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+91,1429374,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+92,1522283,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+93,1621231,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+94,1726611,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+95,1838840,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+96,1958364,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+97,2085657,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+98,2221224,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+99,2365603,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+100,2365603,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+101,2365603,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+102,2365603,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+103,2365603,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+104,2365603,flat from previous level,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+105,2519367,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+106,2683125,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+107,2857528,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+108,3043267,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+109,3241079,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+110,3451749,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+111,3676112,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+112,3915059,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+113,4169537,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+114,4440556,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+115,4729192,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+116,5036589,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+117,5363967,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+118,5712624,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+119,6083944,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+120,6479400,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+121,6900561,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+122,7349097,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+123,7826788,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+124,8335529,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+125,8877338,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+126,9454364,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+127,10068897,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+128,10723375,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+129,11420394,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+130,12162719,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+131,12953295,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+132,13795259,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+133,14691950,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+134,15646926,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+135,16663976,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+136,17747134,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+137,18900697,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+138,20129242,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+139,21437642,previous * 1.065,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+140,22777494,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+141,24201087,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+142,25713654,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+143,27320757,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+144,29028304,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+145,30842573,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+146,32770233,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+147,34818372,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+148,36994520,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+149,39306677,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+150,41763344,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+151,44373553,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+152,47146900,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+153,50093581,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+154,53224429,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+155,56550955,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+156,60085389,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+157,63840725,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+158,67830770,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+159,72070193,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+160,76574580,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+161,81360491,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+162,86445521,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+163,91848366,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+164,97588888,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+165,103688193,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+166,110168705,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+167,117054249,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+168,124370139,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+169,132143272,previous * 1.0625,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+170,138750435,"hardcoded 138,750,435",https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+171,145687956,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+172,152972353,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+173,160620970,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+174,168652018,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+175,177084618,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+176,185938848,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+177,195235790,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+178,204997579,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+179,215247457,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+180,226009829,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+181,237310320,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+182,249175836,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+183,261634627,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+184,274716358,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+185,288452175,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+186,302874783,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+187,318018522,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+188,333919448,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+189,350615420,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+190,368146191,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+191,386553500,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+192,405881175,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+193,426175233,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+194,447483994,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+195,469858193,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+196,493351102,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+197,518018657,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+198,543919589,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+199,571115568,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+200,2207026470,"hardcoded 2,207,026,470",https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+201,2471869646,previous * 1.12,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+202,2768494003,previous * 1.12,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+203,3100713283,previous * 1.12,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+204,3472798876,previous * 1.12,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+205,3889534741,previous * 1.12,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+206,4356278909,previous * 1.12,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+207,4879032378,previous * 1.12,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+208,5464516263,previous * 1.12,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+209,6120258214,previous * 1.12,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+210,9792413142,previous * 1.60,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+211,10869578587,previous * 1.11,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+212,12065232231,previous * 1.11,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+213,13392407776,previous * 1.11,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+214,14865572631,previous * 1.11,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+215,19325244420,previous * 1.30,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+216,21064516417,previous * 1.09,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+217,22960322894,previous * 1.09,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+218,25026751954,previous * 1.09,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+219,27279159629,previous * 1.09,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+220,43646655406,previous * 1.60,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+221,46701921284,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+222,49971055773,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+223,53469029677,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+224,57211861754,previous * 1.07,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+225,74375420280,previous * 1.30,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+226,78094191294,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+227,81998900858,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+228,86098845900,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+229,90403788195,previous * 1.05,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+230,144646061112,previous * 1.60,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+231,148985442945,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+232,153455006233,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+233,158058656419,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+234,162800416111,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+235,211640540944,previous * 1.30,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+236,217989757172,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+237,224529449887,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+238,231265333383,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+239,238203293384,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+240,381125269414,previous * 1.60,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+241,392559027496,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+242,404335798320,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+243,416465872269,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+244,428959848437,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+245,557647802968,previous * 1.30,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+246,574377237057,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+247,591608554168,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+248,609356810793,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+249,627637515116,previous * 1.03,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+250,1313764762354,"hardcoded 1,313,764,762,354",https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+251,1326902409977,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+252,1340171434076,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+253,1353573148416,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+254,1367108879900,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+255,1380779968699,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+256,1394587768385,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+257,1408533646068,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+258,1422618982528,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+259,1436845172353,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+260,2902427248153,previous * 2.02 (implemented as 1.01 + 1.01),https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+261,2931451520634,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+262,2960766035840,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+263,2990373696198,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+264,3020277433159,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+265,3050480207490,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+266,3080985009564,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+267,3111794859659,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+268,3142912808255,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+269,3174341936337,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+270,6412170711400,previous * 2.02 (implemented as 1.01 + 1.01),https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+271,6476292418514,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+272,6541055342699,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+273,6606465896125,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+274,6672530555086,previous * 1.01,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+275,13478511721273,previous * 2.02,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+276,14826362893400,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+277,16308999182740,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+278,17939899101014,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+279,19733889011115,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+280,39862455802452,previous * 2.02,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+281,43848701382697,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+282,48233571520966,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+283,53056928673062,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+284,58362621540368,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+285,117892495511543,previous * 2.02,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+286,129681745062697,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+287,142649919568966,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+288,156914911525862,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+289,172606402678448,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+290,348664933410464,previous * 2.02,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+291,383531426751510,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+292,421884569426661,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+293,464073026369327,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+294,510480329006259,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+295,1031170264592643,previous * 2.02,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+296,1134287291051907,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+297,1247716020157097,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+298,1372487622172806,previous * 1.10,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+299,2058731433259209,previous * 1.50,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java
+300,,level cap; no next-level EXP entry,https://gitlab.com/swordiemen/swordie-232/-/raw/main/src/main/java/net/swordie/ms/constants/GameConstants.java

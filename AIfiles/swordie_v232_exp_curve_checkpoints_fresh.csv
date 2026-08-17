@@ -1,0 +1,31 @@
+﻿level,exp_required_to_next_level,target_minutes_per_level,provisional_baseline_mob_exp_rate_x,status,notes
+1,15,4.5,,pacing anchor only,Do not infer a sub-30 multiplier from this file; calibrate early game against local quests/travel/mobs.
+30,19112,6.0,0.34,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+60,221624,7.0,0.79,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+100,2365603,7.0,1.42,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+140,22777494,7.4,4.11,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+170,138750435,7.7,4.7,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+190,368146191,,5.84,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+199,571115568,,7.26,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+200,2207026470,8.0,10.74,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+205,3889534741,,14.31,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+209,6120258214,,11.68,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+210,9792413142,8.5,18.58,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+215,19325244420,,27.2,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+220,43646655406,,48.31,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+225,74375420280,,67.24,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+230,144646061112,9.5,112.83,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+235,211640540944,,157.4,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+240,381125269414,,270.55,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+245,557647802968,,378.25,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+250,1313764762354,10.5,855.81,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+255,1380779968699,,713.55,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+259,1436845172353,,721.35,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+260,2902427248153,,586.99,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+270,6412170711400,,1009.0,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+275,13478511721273,12.5,2054.0,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+280,39862455802452,,5841.0,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+285,117892495511543,,16634.0,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+290,348664933410464,14.0,47437.0,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+295,1031170264592643,,134940.0,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.
+299,2058731433259209,15.0,261426.0,research checkpoint,Provisional v0.1 baseline; validate against local v232.2 WZ/dat and playtest. Non-monotonic rates are allowed.

@@ -357,7 +357,7 @@ public class Char {
     private Set<FirstEnterReward> firstEnterRewards;
     private MiniRoom miniRoom;
     private List<MiniGameRecord> miniGameRecords;
-    private int currentExpRate;
+    private double currentExpRate = -1D;
 
     public Char() {
         itemPots = new ArrayList<>();
@@ -2500,8 +2500,8 @@ public class Char {
         }
     }
 
-    public int getCurrentLevelExpRate() {
-        if (currentExpRate == 0) {
+    public double getCurrentLevelExpRate() {
+        if (currentExpRate < 0) {
             updateExpRate();
         }
 
@@ -2554,15 +2554,18 @@ public class Char {
             return;
         }
         long incExp = eii == null ? amount : eii.getIncEXP();
-        int expFromExtraExpR = (int) (incExp * ((getTotalStat(BaseStat.expR) - 100) / 100D));
-        amount += expFromExtraExpR;
+        long expFromExtraExpR = MobExpConstants.scaleExpSafely(
+            incExp,
+            (getTotalStat(BaseStat.expR) - 100) / 100D
+        );
+        amount = MobExpConstants.addExpSafely(amount, expFromExtraExpR);
         int level = getLevel();
         CharacterStat cs = getAvatarData().getCharacterStat();
         long curExp = cs.getExp();
         if (level >= GameConstants.charExp.length) {
             return;
         }
-        long newExp = curExp + amount;
+        long newExp = MobExpConstants.addExpSafely(curExp, amount);
         Map<Stat, Object> stats = new HashMap<>();
         while (level < GameConstants.MAX_CHAR_LEVEL && newExp >= GameConstants.charExp[level]) {
             newExp -= GameConstants.charExp[level];
@@ -2581,7 +2584,7 @@ public class Char {
         cs.setExp(newExp);
         stats.put(Stat.exp, newExp);
         if (eii != null) {
-            eii.setIndieBonusExp(expFromExtraExpR);
+            eii.setIndieBonusExp(Util.maxInt(expFromExtraExpR));
             write(WvsContext.message(MessagePacket.incExpMessage(eii)));
         }
 
