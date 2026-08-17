@@ -104,3 +104,5 @@ letsencrypt.jks
 tespia_scripts/
 /client/
 /client-original/
+/backups/account-security/
+/temp/
