@@ -40,7 +40,7 @@ public class WebApi {
         HttpServer httpServer = null;
 
         try {
-            InetSocketAddress address = new InetSocketAddress(ServerConstants.WEB_API_PORT);
+            InetSocketAddress address = new InetSocketAddress("127.0.0.1", ServerConstants.WEB_API_PORT);
             httpServer = HttpServer.create(address, 0);
 
             var contextBuilder = new HttpContextBuilder();

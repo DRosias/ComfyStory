@@ -1,0 +1,13 @@
+danny-games.servegame.com {
+	handle /api/* {
+		reverse_proxy 127.0.0.1:3000
+	}
+
+	handle {
+		root * D:/HostedFiles
+		header Content-Disposition attachment
+		file_server
+	}
+
+	header X-Content-Type-Options nosniff
+}
