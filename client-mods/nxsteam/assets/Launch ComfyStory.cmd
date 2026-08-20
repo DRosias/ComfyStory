@@ -11,7 +11,7 @@ exit /b %ERRORLEVEL%
 reg.exe query "HKCU\Software\ComfyStory" /v "WindowedModeInitialized" >nul 2>&1
 if errorlevel 1 call :initializeWindowedMode
 
-start "" /D "%~dp0" "%~dp0ComfyStoryLauncher\nxsteam.exe" "%~dp0MapleStory.exe"
+start "" /D "%~dp0wz" "%~dp0wz\ComfyStoryLauncher\nxsteam.exe" "%~dp0wz\MapleStory.exe"
 exit /b
 
 :initializeWindowedMode

@@ -37,6 +37,7 @@ public class EtcData {
     private static final Map<Integer, AndroidInfo> androidInfo = new HashMap<>();
     private static Map<Integer, Integer> androidOffsets;
     private static final Map<Integer, CommodityItem> commodityItems = new HashMap<>();
+    private static final Map<Integer, List<Integer>> cashPackages = new HashMap<>();
     private static final Map<Integer, Integer> growthHelp = new HashMap<>();
     private static final Map<Integer, SetItemInfo> setItemInfos = new HashMap<>();
     // MapleUnion
@@ -181,6 +182,62 @@ public class EtcData {
             ci.setOnSale(((WzProperty) commodityId.getChild("OnSale", 0)).getIntValue() != 0);
 
             commodityItems.put(ci.getSn(), ci);
+        }
+    }
+
+    @Saver(varName = "cashPackages")
+    private static void saveCashPackages(File file) {
+        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(file))) {
+            dos.writeInt(cashPackages.size());
+            for (Map.Entry<Integer, List<Integer>> entry : cashPackages.entrySet()) {
+                dos.writeInt(entry.getKey());
+                dos.writeInt(entry.getValue().size());
+                for (int commoditySn : entry.getValue()) {
+                    dos.writeInt(commoditySn);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Loader(varName = "cashPackages")
+    public static void loadCashPackages(File file, boolean exists) {
+        cashPackages.clear();
+        if (!exists) {
+            loadCashPackagesFromWz();
+            saveCashPackages(file);
+        } else {
+            try (DataInputStream dis = new DataInputStream(new FileInputStream(file))) {
+                int packageCount = dis.readInt();
+                for (int i = 0; i < packageCount; i++) {
+                    int packageItemId = dis.readInt();
+                    int commodityCount = dis.readInt();
+                    List<Integer> commoditySns = new ArrayList<>(commodityCount);
+                    for (int j = 0; j < commodityCount; j++) {
+                        commoditySns.add(dis.readInt());
+                    }
+                    cashPackages.put(packageItemId, commoditySns);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static void loadCashPackagesFromWz() {
+        String wzDir = ServerConstants.WZ_DIR + "/Etc.wz";
+        WzFile dir = new WzFile(wzDir);
+        dir.parse(new WzMappedInputStream(Paths.get(wzDir)));
+        WzObject<?, ?> wzPackages = dir.getChild("CashPackage.img");
+        for (WzObject<?, ?> wzPackage : wzPackages) {
+            int packageItemId = Integer.parseInt(wzPackage.getName());
+            WzObject<?, ?> wzCommoditySns = wzPackage.getChild("SN");
+            List<Integer> commoditySns = new ArrayList<>();
+            for (WzObject<?, ?> wzCommoditySn : wzCommoditySns) {
+                commoditySns.add(((WzProperty<?>) wzCommoditySn).getIntValue());
+            }
+            cashPackages.put(packageItemId, commoditySns);
         }
     }
 
@@ -983,6 +1040,10 @@ public class EtcData {
 
     public static CommodityItem getCommodityItem(int itemSn) {
         return commodityItems.get(itemSn);
+    }
+
+    public static List<Integer> getCashPackageCommoditySns(int packageItemId) {
+        return cashPackages.get(packageItemId);
     }
 
     public static SetItemInfo getSetItemInfoById(Integer id) {

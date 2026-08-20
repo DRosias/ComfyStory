@@ -452,6 +452,11 @@ public class ItemHandlerModule {
         }
         boolean add = itemID < 5191000; // add property doesn't include the "Slimming Medicine"
         PetItem petItem = (PetItem) pi;
+        if (add == petItem.hasPetSkill(ps)) {
+            chr.chatMessage(add ? "That pet already has this skill." : "That pet does not have this skill.");
+            chr.dispose();
+            return true;
+        }
         if (add) {
             petItem.addPetSkill(ps);
         } else {
@@ -459,6 +464,7 @@ public class ItemHandlerModule {
         }
         petItem.updateToChar(chr);
         chr.consumeItem(item);
+        chr.write(WvsContext.cashPetSkillSettingResult(petItem.getId(), add, ps.getVal()));
         return false;
     }
 

@@ -680,6 +680,16 @@ public class WvsContext {
         return outPacket;
     }
 
+    public static OutPacket cashPetSkillSettingResult(long petItemSn, boolean added, int petSkill) {
+        OutPacket outPacket = new OutPacket(OutHeader.CASH_PET_SKILL_SETTING_RESULT);
+
+        outPacket.encodeLong(petItemSn);
+        outPacket.encodeByte(added);
+        outPacket.encodeShort(petSkill);
+
+        return outPacket;
+    }
+
     public static OutPacket setSonOfLinkedSkillResult(LinkedSkillResultType lsrt, int sonID, String sonName,
                                                       int originalSkillID, String existingParentName) {
         OutPacket outPacket = new OutPacket(OutHeader.SET_SON_OF_LINKED_SKILL_RESULT);

@@ -50,7 +50,12 @@ try {
     }
 
     Copy-Item -Path (Join-Path $overlayPath '*') -Destination $workingSource -Recurse -Force
-    Copy-Item -LiteralPath $launcherPath -Destination (Join-Path $workingGameDir 'Launch ComfyStory.cmd') -Force
+    $clientLauncher = Join-Path $projectPath 'client\Launch ComfyStory.cmd'
+    $legacyLauncher = Join-Path $workingGameDir 'Launch ComfyStory.cmd'
+    Copy-Item -LiteralPath $launcherPath -Destination $clientLauncher -Force
+    if (Test-Path -LiteralPath $legacyLauncher) {
+        Remove-Item -LiteralPath $legacyLauncher -Force
+    }
 
     Write-Host 'ComfyStory nxsteam launcher applied successfully.'
 } finally {

@@ -35,7 +35,9 @@ import net.swordie.ms.world.shop.cashshop.CashShop;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -77,7 +79,7 @@ public class CashShopHandler {
             case Req_IncCharSlotCount -> handleIncCharSlotCount(c, inPacket, user, account);
             case Req_IncBuyCharCount -> handleBuyCharCount(c, inPacket, user, account, chr);
             case Req_Rebate -> handleRebate(chr, inPacket, trunk);
-            case Req_BuyPackage -> handleBuyPackage(c, inPacket, user, account, chr);
+            case Req_BuyPackage -> handleBuyPackage(c, inPacket, user, account, chr, trunk);
             case Req_ExtraInfo -> {
                 int sn = inPacket.decodeInt();
                 c.write(CCashShop.extraInfoResult(sn, 13));
@@ -90,14 +92,63 @@ public class CashShopHandler {
         }
     }
 
-    private static void handleBuyPackage(Client c, InPacket inPacket, User user, Account account, Char chr) {
+    private static void handleBuyPackage(Client c, InPacket inPacket, User user, Account account, Char chr, Trunk trunk) {
         var slotType = inPacket.decodeByte();
         var paymentMethod = inPacket.decodeInt();
         var commoditySn = inPacket.decodeInt();
 
         var comItem = EtcData.getCommodityItem(commoditySn);
+        if (comItem == null) {
+            c.write(CCashShop.error());
+            log.warn("Requested cash package commodity {} could not be found.", commoditySn);
+            return;
+        }
 
-        c.write(CCashShop.error());
+        var packageCommoditySns = EtcData.getCashPackageCommoditySns(comItem.getItemId());
+        if (packageCommoditySns == null || packageCommoditySns.isEmpty()) {
+            c.write(CCashShop.error());
+            log.warn("Cash package item {} has no package contents.", comItem.getItemId());
+            return;
+        }
+
+        List<CashItemInfo> packageItems = new ArrayList<>(packageCommoditySns.size());
+        for (int packageCommoditySn : packageCommoditySns) {
+            CommodityItem packageCommodity = EtcData.getCommodityItem(packageCommoditySn);
+            if (packageCommodity == null || ItemData.getItemInfoByID(packageCommodity.getItemId()) == null) {
+                c.write(CCashShop.error());
+                log.warn("Cash package item {} contains unavailable commodity {}.",
+                        comItem.getItemId(), packageCommoditySn);
+                return;
+            }
+            packageItems.add(packageCommodity.toCashItemInfo(account, 1));
+        }
+
+        int requiredLockerSlots = 0;
+        for (CashItemInfo packageItem : packageItems) {
+            if (trunk.getSimilarEndDateItem(packageItem) == null) {
+                requiredLockerSlots++;
+            }
+        }
+        if (trunk.getLocker().size() + requiredLockerSlots > GameConstants.MAX_LOCKER_SIZE) {
+            c.write(CCashShop.fullInventoryMsg());
+            return;
+        }
+
+        if (!applyCost(c, user, account, paymentMethod, comItem, 1)) {
+            return;
+        }
+
+        for (CashItemInfo packageItem : packageItems) {
+            CashItemInfo similarItem = trunk.getSimilarEndDateItem(packageItem);
+            if (similarItem != null) {
+                similarItem.addQuantity(packageItem.getQuantity());
+                packageItem = similarItem;
+            } else {
+                trunk.addCashItem(packageItem);
+            }
+            c.write(CCashShop.cashItemResBuyDone(packageItem, null, null));
+        }
+        c.write(CCashShop.queryCashResult(chr));
     }
 
     private static void handleBuyCharCount(Client c, InPacket inPacket, User user, Account account, Char chr) {
@@ -122,12 +173,12 @@ public class CashShopHandler {
             return;
         }
 
-        if (!applyCost(c, user, account, paymentMethod, comItem, 1)) return;
-
         if (user.getCharacterSlots() >= ServerConstants.MAX_CHARACTERS) {
             c.write(CCashShop.incCharSlotCountFailed(CashItemType.FailReason_LimitOverCharacter));
             return;
         }
+
+        if (!applyCost(c, user, account, paymentMethod, comItem, 1)) return;
 
         user.setCharacterSlots(user.getCharacterSlots() + 1);
 
@@ -159,8 +210,15 @@ public class CashShopHandler {
             return;
         }
 
+        if (user.getCharacterSlots() >= ServerConstants.MAX_CHARACTERS) {
+            c.write(CCashShop.incCharSlotCountFailed(CashItemType.FailReason_LimitOverCharacter));
+            return;
+        }
+
         if (!applyCost(c, user, account, paymentMethod, comItem, 1)) return;
 
+        user.setCharacterSlots(user.getCharacterSlots() + 1);
+        c.write(CCashShop.incCharSlotCountDone(user.getCharacterSlots()));
     }
 
     private static void handleRebate(Char chr, InPacket inPacket, Trunk trunk) {
@@ -208,9 +266,14 @@ public class CashShopHandler {
             return;
         }
 
+        int delta = itemInfo.getDelta();
+        if (trunk.getSlotCount() >= GameConstants.MAX_TRUNK_SIZE) {
+            c.write(CCashShop.incSlotCountFailed(CashItemType.FailReason_CountOver));
+            return;
+        }
+
         if (!applyCost(c, user, account, paymentMethod, comItem, 1)) return;
 
-        int delta = itemInfo.getDelta();
         trunk.setSlotCount(Math.min(GameConstants.MAX_TRUNK_SIZE, trunk.getSlotCount() + delta));
 
         c.write(CCashShop.incTrunkCountDone(trunk));
@@ -245,8 +308,6 @@ public class CashShopHandler {
             return;
         }
 
-        if (!applyCost(c, user, account, paymentMethod, comItem, 1)) return;
-
         int invTypeVal = (itemId / 1000) % 10;
         int delta = itemInfo.getDelta();
         int slots = 0;
@@ -263,6 +324,15 @@ public class CashShopHandler {
             }
             default -> toExpand.put(InvType.getInvTypeByVal(invTypeVal), delta);
         }
+
+        boolean canExpand = toExpand.isEmpty() || toExpand.entrySet().stream().anyMatch(entry ->
+                chr.getInventoryByType(entry.getKey()).getSlots() < Inventory.MAX_SLOTS);
+        if (!canExpand || (invTypeVal == 0 && trunk.getSlotCount() >= GameConstants.MAX_TRUNK_SIZE)) {
+            c.write(CCashShop.incSlotCountFailed(CashItemType.FailReason_CountOver));
+            return;
+        }
+
+        if (!applyCost(c, user, account, paymentMethod, comItem, 1)) return;
 
         boolean showMessage = true;
 
@@ -353,11 +423,16 @@ public class CashShopHandler {
             return;
         }
 
-        if (!applyCost(c, user, account, paymentMethod, comItem, 1)) return;
-
         CashItemInfo cii = comItem.toCashItemInfo(account, 1);
 
         var similarItem = trunk.getSimilarEndDateItem(cii);
+        if (similarItem == null && trunk.isFullLocker()) {
+            c.write(CCashShop.fullInventoryMsg());
+            return;
+        }
+
+        if (!applyCost(c, user, account, paymentMethod, comItem, 1)) return;
+
         if (similarItem != null) {
             similarItem.addQuantity(cii.getQuantity());
             cii = similarItem;
@@ -374,6 +449,9 @@ public class CashShopHandler {
                 iterativeBuyInfo.encodeItems(chr);
                 chr.setIterativeBuyInfo(null);
             }
+            chr.write(CCashShop.queryCashResult(chr));
+        } else {
+            chr.write(CCashShop.cashItemResBuyDone(cii, null, null));
             chr.write(CCashShop.queryCashResult(chr));
         }
     }

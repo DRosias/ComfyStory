@@ -68,6 +68,7 @@ public class Server extends Properties {
 	private boolean isInShutdown = false;
 	private int minutesRemaining;
 	private int shutdownScheduledMinutes;
+	private boolean worldShutdownStarted;
 
 	private List<World> worldList = new ArrayList<>();
 	private static Map<String, AuthInfo> authTokens = new ConcurrentHashMap<>();
@@ -513,6 +514,10 @@ public class Server extends Properties {
 	}
 
 	public static void main(String[] args) {
+		Runtime.getRuntime().addShutdownHook(new Thread(
+				getInstance()::performWorldShutdown,
+				"comfystory-shutdown"
+		));
 		getInstance().init(args);
 	}
 
@@ -580,12 +585,20 @@ public class Server extends Properties {
 	}
 
 	private void startWorldShutdown() {
+		performWorldShutdown();
+		System.exit(0);
+	}
+
+	private synchronized void performWorldShutdown() {
+		if (worldShutdownStarted) {
+			return;
+		}
+		worldShutdownStarted = true;
 		log.warn("Starting shutdown.");
 		var start = System.currentTimeMillis();
 		for (World world : getWorlds()) {
 			world.shutdown();
 		}
 		log.warn(String.format("Shutdown complete, took %dms", System.currentTimeMillis() - start));
-		System.exit(0);
 	}
 }

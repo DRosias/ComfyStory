@@ -19,6 +19,10 @@ How to install: see #server-setup-guide in the Swordie discord.
   * We switched off of Hibernate when it was causing issues in prod and it being hard to debug
 * Netty for networking
 
+Build with `Build ComfyStory Server.cmd` and run with `Start ComfyStory Server.cmd`. Both scripts select Java 21 only
+for their own process, so the user-level `JAVA_HOME` can remain configured for other servers. Set
+`COMFYSTORY_JAVA_HOME` if Java 21 is installed outside the Eclipse Adoptium directory under Program Files.
+
 Feel free to create PRs to improve this source. You can create a fork of this repository, then work on that and 
 create a merge request towards this main repository. Tag Asura or Sjonnie on discord to ask for a review.
 

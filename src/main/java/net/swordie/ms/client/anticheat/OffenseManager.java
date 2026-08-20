@@ -14,7 +14,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.persistence.Transient;
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
@@ -26,11 +25,6 @@ public class OffenseManager {
     private static final int TRUST_FOR_RESET = 3000;
     private static final int MAX_LIE_DETECTOR_FAILS = 5;
     private static final int LIE_DETECTOR_COOLDOWN = 30 * 60; // 30 minutes
-    private static final long LIE_DETECTOR_RESET_DAYS = 14;
-
-    private static final int LIE_DETECTOR_FIRST_OFFENSE = 30; // 1 day //TODO change this back to 1 once we launch, this is for anti botting manual LD
-    private static final int LIE_DETECTOR_SECOND_OFFENSE = 3; // 3 days
-    private static final int RUNE_FAIL_FIRST_OFFENSE = 1; // 1 day
 
     private static final int LOW_TRUST_POINT_FOR_BAN = 7;
 
@@ -279,21 +273,12 @@ public class OffenseManager {
         return lowTrustPoint;
     }
 
-    public void setLieDetectorFailsAndApplyBan(int lieDetectorFails, boolean fromRune) {
-        if (lieDetectorFails >= MAX_LIE_DETECTOR_FAILS && !isBanned()) {
-            LocalDateTime banDate;
-            if(fromRune){
-                banDate = FileTime.currentTime().toLocalDateTime().plusDays(RUNE_FAIL_FIRST_OFFENSE);
-            }
-            else{
-                banDate = FileTime.currentTime().toLocalDateTime().plusDays(LIE_DETECTOR_FIRST_OFFENSE);
-            }
-          /*  if (getLieDetectorBans() > 0 && getLastBanTime() != null && getLastBanTime().isAfter(FileTime.currentTime().toLocalDateTime().minusDays(LIE_DETECTOR_RESET_DAYS))) {
-                banDate = FileTime.currentTime().toLocalDateTime().plusHours(LIE_DETECTOR_SECOND_OFFENSE);
-            }*/
-            setLieDetectorFailsAndApplyBan(0, fromRune);
-            setLieDetectorBans(getLieDetectorBans() + 1);
-            ban("Not responding to anti-macro tests or failing a rune too often.", banDate);
+    public void setLieDetectorFailsWithLimit(int lieDetectorFails) {
+        if (lieDetectorFails >= MAX_LIE_DETECTOR_FAILS) {
+            log.warn(String.format(
+                    "[%s] Reached the lie detector/rune failure limit; clearing failures without applying an automatic ban.",
+                    chr == null ? "Not online" : chr.getName()));
+            setLieDetectorFails(0);
             return;
         }
 
@@ -368,7 +353,7 @@ public class OffenseManager {
             setLieDetectorAnswer("");
         }
 
-        setLieDetectorFailsAndApplyBan(getLieDetectorFails() + points, fromRune);
+        setLieDetectorFailsWithLimit(getLieDetectorFails() + points);
 
 
         if (!fromRune) {
@@ -377,7 +362,7 @@ public class OffenseManager {
                     AntiMacro.AntiMacroType.AntiMacroFieldRequest, 0));
 
             if (getLieDetectorFails() != 0 && askForNew) {
-                // == 0 => user has been banned
+                // == 0 => the failure limit was reached and the counter was cleared
                 chr.sendLieDetector(true);
             }
         }
@@ -392,7 +377,7 @@ public class OffenseManager {
     public void passedLieDetector() {
         stopLieDetectorTimer();
         setLieDetectorAnswer("");
-        setLieDetectorFailsAndApplyBan(0, false);
+        setLieDetectorFailsWithLimit(0);
 
         chr.write(WvsContext.antiMacroResult(null, AntiMacro.AntiMacroResultType.AntiMacroRes_Success,
                 AntiMacro.AntiMacroType.AntiMacroRequestNone, 0));
@@ -404,13 +389,6 @@ public class OffenseManager {
         } else {
             chr.chatMessage("You don't have enough space for the Comfy Coin reward from passing the lie detector test.");
         }
-    }
-
-    private void ban(String reason, LocalDateTime banDate) {
-        chr.getUser().setBanExpireDate(FileTime.fromDate(banDate));
-        chr.getUser().setBanReason(reason);
-        chr.getUser().getOffenseManager().addOffense(reason, chr.getId());
-        chr.write(WvsContext.returnToTitle());
     }
 
     public void setRandArrows(int[] randArrows) {

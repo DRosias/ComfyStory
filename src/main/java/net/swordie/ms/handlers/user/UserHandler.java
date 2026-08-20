@@ -457,7 +457,7 @@ public class UserHandler {
 
         if (idx == om.getRandArrows().length - 1) {
             // all arrows correct
-            om.setLieDetectorFailsAndApplyBan(0, true);
+            om.setLieDetectorFailsWithLimit(0);
             RuneStoneFieldModule.useRuneStone(chr, field, runeStone);
             runeStone.activateRuneStoneEffect(chr);
             chr.addSkillCoolTime(RuneStone.SEALED_RUNE_POWER, GameConstants.RUNE_COOLDOWN_TIME * 60 * 1000);

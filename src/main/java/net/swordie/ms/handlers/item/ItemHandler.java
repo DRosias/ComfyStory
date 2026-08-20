@@ -206,6 +206,38 @@ public class ItemHandler {
         }
     }
 
+    @Handler(ops = {InHeader.USER_CASH_PET_SKILL_SETTING_REQUEST, InHeader.USER_OPTION_CHANGE_REQUEST})
+    public static void handleUserCashPetSkillSettingRequest(Client c, InPacket inPacket) {
+        Char chr = c.getChr();
+        inPacket.decodeInt(); // tick
+        short pos = inPacket.decodeShort();
+        Item item = chr.getCashInventory().getItemBySlot(pos);
+
+        if (item == null || item.getItemId() / 10000 != 519) {
+            chr.chatMessage("Could not find that pet skill item.");
+            chr.dispose();
+            return;
+        }
+
+        // Some client builds include the item ID before the target pet SN, while others derive it
+        // from the inventory position. Support both forms and validate the redundant ID when sent.
+        if (inPacket.getUnreadAmount() == Integer.BYTES + Long.BYTES) {
+            int itemId = inPacket.decodeInt();
+            if (item.getItemId() != itemId) {
+                chr.chatMessage("Could not find that pet skill item.");
+                chr.dispose();
+                return;
+            }
+        } else if (inPacket.getUnreadAmount() != Long.BYTES) {
+            log.warn("Unexpected pet skill setting request size {} for item {}.",
+                    inPacket.getUnreadAmount(), item.getItemId());
+            chr.dispose();
+            return;
+        }
+
+        ItemHandlerModule.handlePetSkillItem(inPacket, chr, item.getItemId(), item);
+    }
+
     @Handler(ops = {InHeader.USER_ARCANE_SYMBOL_REQUEST, InHeader.USER_AUTHENTIC_SYMBOL_REQUEST})
     public static void handleUserArcaneSymbolRequest(Char chr, InPacket inPacket) {
         int type = inPacket.decodeInt();

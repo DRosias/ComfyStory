@@ -3,9 +3,26 @@ setlocal
 
 cd /d "%~dp0"
 
-where java.exe >nul 2>&1
-if errorlevel 1 (
-    echo Java was not found on PATH. Java 21 is required.
+if defined COMFYSTORY_JAVA_HOME set "COMFYSTORY_SERVER_JAVA=%COMFYSTORY_JAVA_HOME%"
+
+if not defined COMFYSTORY_SERVER_JAVA (
+    for /d %%J in ("%ProgramFiles%\Eclipse Adoptium\jdk-21*") do (
+        if exist "%%~fJ\bin\java.exe" set "COMFYSTORY_SERVER_JAVA=%%~fJ"
+    )
+)
+
+if not defined COMFYSTORY_SERVER_JAVA (
+    echo Java 21 was not found for the ComfyStory server.
+    echo Set COMFYSTORY_JAVA_HOME to the Java 21 JDK directory and try again.
+    pause
+    exit /b 1
+)
+
+for /f "tokens=3" %%V in ('call "%COMFYSTORY_SERVER_JAVA%\bin\java.exe" -version 2^>^&1 ^| findstr /i "version"') do set "COMFYSTORY_JAVA_VERSION=%%~V"
+for /f "tokens=1 delims=." %%V in ("%COMFYSTORY_JAVA_VERSION%") do set "COMFYSTORY_JAVA_MAJOR=%%V"
+
+if not "%COMFYSTORY_JAVA_MAJOR%"=="21" (
+    echo ComfyStory requires Java 21, but %COMFYSTORY_SERVER_JAVA% contains Java %COMFYSTORY_JAVA_VERSION%.
     pause
     exit /b 1
 )
@@ -26,9 +43,11 @@ if not exist "%SERVER_JAR%" (
 )
 
 echo Starting ComfyStory from %CD%...
+echo Using Java %COMFYSTORY_JAVA_VERSION% from %COMFYSTORY_SERVER_JAVA%.
 echo Press Ctrl+C to stop the server.
+echo If asked to terminate the batch job, answer N and wait for "Shutdown complete".
 echo.
-java.exe -jar "%SERVER_JAR%"
+"%COMFYSTORY_SERVER_JAVA%\bin\java.exe" -jar "%SERVER_JAR%"
 set "SERVER_EXIT=%ERRORLEVEL%"
 
 echo.

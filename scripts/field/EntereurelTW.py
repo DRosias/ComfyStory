@@ -7,14 +7,13 @@ from net.swordie.ms.constants import JobConstants
 
 mercTutEnd = 24009
 
-kingsSeat = 101050010
-kingsSeatExit = 3
+kingsSeatArrival = 7
 
 def exitFromKingsSeat():
-    return sm.getPreviousFieldID() == kingsSeat and sm.getPreviousPortalID() == kingsSeatExit
+    return chr.getAvatarData().getCharacterStat().getPortal() == kingsSeatArrival
 
 # Only play cutscene for Mercedes when exiting from King's Seat through the normal portal and without having the QRValue flag applied
-if JobConstants.isMercedes(chr.getJob()) and not sm.hasQuest(mercTutEnd) and exitFromKingsSeat():
+if JobConstants.isMercedes(chr.getJob()) and sm.getQRValue(mercTutEnd) != "1" and exitFromKingsSeat():
     sm.lockInGameUI(True)
     sm.forcedInput(1)
     sm.sendDelay(1000)
