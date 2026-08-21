@@ -94,7 +94,7 @@ if sm.hasQuest(58909): # Tears of Princess Sakuno quest in-progress
     sm.lockInGameUI(False)
     sm.dispose() # just in-case
 
-elif sm.hasQuestCompleted(58909): # has completed Tears of Princess Sakuno's quest
+elif sm.hasQuest(58910): # What Happened to Ayame quest in-progress
 
     sm.spawnNpc(NOBUKANE, 143, 187)
     sm.spawnNpc(AYAME, 488, 187)
@@ -168,7 +168,7 @@ elif sm.hasQuestCompleted(58909): # has completed Tears of Princess Sakuno's que
     sm.sendDelay(200)
     sm.setFieldColour(GreyFieldType.Background, 255, 255, 255, 2000)
 
-    # TODO: most likely complete "Where did Ayame Go" quest here (58910)
+    sm.completeQuest(58910) # What Happened to Ayame
 
     sm.removeNpc(NOBUKANE)
     sm.removeNpc(AYAME)

@@ -75,6 +75,7 @@ import net.swordie.ms.world.field.obstacleatom.ObstacleAtomInfo;
 import net.swordie.ms.world.field.obstacleatom.ObstacleInRowInfo;
 import net.swordie.ms.world.field.obstacleatom.ObstacleRadianInfo;
 import net.swordie.ms.world.shop.NpcShopDlg;
+import net.swordie.ms.world.gach.result.GachaponDlgType;
 import net.swordie.orm.dao.AllianceDao;
 import net.swordie.orm.dao.CharDao;
 import net.swordie.orm.dao.SworDaoFactory;
@@ -705,6 +706,11 @@ public class ScriptManagerImpl implements ScriptManager {
         getNpcScriptInfo().setDefaultSelect(defaultSelect);
         getNpcScriptInfo().setSelectText(text);
         return sendGeneralSay("", AskSelectMenu);
+    }
+
+    @Override
+    public void sendGachaponDlg(GachaponDlgType dlgType) {
+        getChr().write(getChr().getGachaponManager().encode(dlgType));
     }
 
     // Start of param methods ------------------------------------------------------------------------------------------

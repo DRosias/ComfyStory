@@ -12,6 +12,7 @@ import net.swordie.ms.util.Position;
 import net.swordie.ms.util.container.Tuple;
 import net.swordie.ms.world.field.Clock;
 import net.swordie.ms.world.field.Field;
+import net.swordie.ms.world.gach.result.GachaponDlgType;
 import org.python.core.PyTuple;
 
 import java.util.List;
@@ -227,6 +228,13 @@ public interface ScriptManager {
 	 * @param dlgType the dialogue type.
 	 */
 	int sendAskSlideMenu(int dlgType);
+
+	/**
+	 * Opens one of the native gachapon dialogs for the character.
+	 *
+	 * @param dlgType the gachapon dialog to open
+	 */
+	void sendGachaponDlg(GachaponDlgType dlgType);
 
 	// Start of param methods ------------------------------------------------------------------------------------------
 

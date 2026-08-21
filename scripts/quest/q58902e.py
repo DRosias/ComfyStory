@@ -14,7 +14,6 @@ if "3" in sm.getQRValue(58901): # Regards, Takeda Shingen
     sm.sendSay("Let me take a look and I'll surely find a way to lift the spell. Come back later.")
 
 
+    # Quest completion consumes the required 30 spell scrolls. Do not remove
+    # the player's surplus copies of the quest item.
     sm.completeQuest(parentID) # Regards, Takeda Shingen
-    sm.completeQuest(parentID) # Regards, Takeda Shingen
-    itemQty = sm.getQuantityOfItem(ITEMID) # TODO: This for some reason doesn't remove all quantites of the item.
-    sm.consumeItem(ITEMID, itemQty)

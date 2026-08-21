@@ -519,6 +519,30 @@ public class Server extends Properties {
 				"comfystory-shutdown"
 		));
 		getInstance().init(args);
+		if (getInstance().getStartedTime() != null) {
+			getInstance().listenForConsoleCommands();
+		}
+	}
+
+	private void listenForConsoleCommands() {
+		log.info("Type \"stop\" and press Enter to shut down safely.");
+		try (var reader = new BufferedReader(new InputStreamReader(System.in))) {
+			String command;
+			while ((command = reader.readLine()) != null) {
+				switch (command.trim().toLowerCase(Locale.ROOT)) {
+					case "stop":
+					case "shutdown":
+						shutdown(0);
+						return;
+					case "":
+						break;
+					default:
+						log.info("Unknown console command. Type \"stop\" to shut down safely.");
+				}
+			}
+		} catch (IOException e) {
+			log.error("Stopped reading server console commands.", e);
+		}
 	}
 
 	public void removeCharsByUser(User user) {

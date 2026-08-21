@@ -43,7 +43,7 @@ public class Channel {
     private Map<Integer, TransferInfo> transfers;
     private Map<Integer, Char> chars = new ConcurrentHashMap<>();
     private List<Tuple<Integer, Instance>> instances = new ArrayList<>(); // < enterFieldId , Instance >
-    public final int MAX_DISPLAY_SIZE = 100;
+    public final int MAX_DISPLAY_SIZE = 10;
     public final int MAX_SIZE = 1000;
 
     private Channel(String name, World world, int channelId, boolean adultChannel) {
@@ -75,7 +75,7 @@ public class Channel {
     }
 
     public int getGaugePx() {
-        return (int) Math.max(1, (chars.size() * 64D) / MAX_DISPLAY_SIZE);
+        return (int) Math.min(64, Math.max(1, (chars.size() * 64D) / MAX_DISPLAY_SIZE));
     }
 
     public WorldId getWorldId() {

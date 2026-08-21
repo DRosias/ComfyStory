@@ -99,7 +99,6 @@ if chr.getJob() == 2005:
     sm.forcedInput(2)
     sm.dispose()
 elif chr.getJob() == 2004:
-    # TODO: replace the invokeAfterDelay to sendDelay.
     WHITE_PRIEST = 2159360
     BLACK_PRIEST = 2159361
 
@@ -115,17 +114,20 @@ elif chr.getJob() == 2004:
     sm.spawnNpc(BLACK_PRIEST, 1240, 69)
     sm.flipNpcByTemplateId(BLACK_PRIEST, False)
 
-    sm.invokeAfterDelay(2000, "showBalloonMsg", "Effect/Direction8.img/effect/tuto/BalloonMsg0/5", 2000)
-    sm.invokeAfterDelay(3500, "showNpcSpecialActionByTemplateId", ARAN, "attack")
-    sm.invokeAfterDelay(5000, "showNpcSpecialActionByTemplateId", WHITE_PRIEST, "die")
-    sm.invokeAfterDelay(5000, "showNpcSpecialActionByTemplateId", BLACK_PRIEST, "die")
-
-    sm.invokeAfterDelay(6500, "hideNpcByTemplateId", WHITE_PRIEST, True)
-    sm.invokeAfterDelay(6500, "hideNpcByTemplateId", BLACK_PRIEST, True)
-
-    sm.invokeAfterDelay(6500, "forcedMove", False, 250)
+    sm.sendDelay(2000)
+    sm.showBalloonMsg("Effect/Direction8.img/effect/tuto/BalloonMsg0/5", 2000)
+    sm.sendDelay(1500)
+    sm.showNpcSpecialActionByTemplateId(ARAN, "attack")
+    sm.sendDelay(1500)
+    sm.showNpcSpecialActionByTemplateId(WHITE_PRIEST, "die")
+    sm.showNpcSpecialActionByTemplateId(BLACK_PRIEST, "die")
+    sm.sendDelay(1500)
+    sm.hideNpcByTemplateId(WHITE_PRIEST, True)
+    sm.hideNpcByTemplateId(BLACK_PRIEST, True)
+    sm.forcedMove(False, 250)
+    sm.sendDelay(500)
     sm.setSpeakerID(ARAN)
-    sm.invokeAfterDelay(7000, "sendNext", "I figured you'd have your hands full right now, but here you are goofing around!")
+    sm.sendNext("I figured you'd have your hands full right now, but here you are goofing around!")
 
     sm.setPlayerAsSpeaker()
     sm.sendNext("Aran! You're wounded! Where are Mercedes and Freud?")
@@ -147,8 +149,12 @@ elif chr.getJob() == 2004:
     sm.sendNext("...Be careful")
 
     sm.forcedMove(False, 500)
-    sm.invokeAfterDelay(4000, "showBalloonMsg", "Effect/Direction8.img/effect/tuto/BalloonMsg0/7", 2000)
-    sm.invokeAfterDelay(4500, "showEffect", "Effect/Direction8.img/effect/tuto/BalloonMsg0/6", 2000, -300, -100, 0, 0, True, 0)
-    sm.invokeAfterDelay(6900, "lockInGameUI", False)
-    sm.invokeAfterDelay(7000, "warp", 927020060)
+    sm.sendDelay(4000)
+    sm.showBalloonMsg("Effect/Direction8.img/effect/tuto/BalloonMsg0/7", 2000)
+    sm.sendDelay(500)
+    sm.showEffect("Effect/Direction8.img/effect/tuto/BalloonMsg0/6", 2000, -300, -100, 0, 0, True, 0)
+    sm.sendDelay(2400)
+    sm.lockInGameUI(False)
+    sm.sendDelay(100)
+    sm.warp(927020060)
     sm.dispose()

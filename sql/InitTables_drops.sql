@@ -5990,7 +5990,14 @@ values
     (5130105, 4000055, 7500, 1, 1), # Dark Jr. Yeti | Dark Jr. Yeti Skin
     (5130103, 2870206, 100, 1, 1), # Croco | Croco Familiar
     (5130103, 4000033, 7500, 1, 1), # Croco | Croco Skin
+    (3300100, 4034104, 10000, 1, 1), # Mushroom Chandelier | Mushroom Bulb
+    (3300101, 4034105, 10000, 1, 1), # Mushroom Knight Armor | Mushroom Armor
     (3300104, 4034110, 7500, 1, 1), # Warm Viking | Viking's Helm
+    (3300105, 4034111, 10000, 1, 1), # Tired Viking | Kidnapped Viking
+    (3300106, 4034114, 10000, 1, 1), # Serious Viking | Secret Puzzle Piece
+    (3300107, 4034114, 10000, 1, 1), # Master Squid | Secret Puzzle Piece
+    (3300108, 4034112, 10000, 1, 1), # Viking Squad | Iron Chain Key
+    (3300108, 4034114, 10000, 1, 1), # Viking Squad | Secret Puzzle Piece
     (2230114, 2000001, 100, 1, 1), # Muddy Swamp Monster | Orange Potion
     (2230114, 2040614, 100, 1, 1), # Muddy Swamp Monster | Scroll for Bottomwear for DEX 100%
     (2230114, 2000003, 100, 1, 1), # Muddy Swamp Monster | Blue Potion

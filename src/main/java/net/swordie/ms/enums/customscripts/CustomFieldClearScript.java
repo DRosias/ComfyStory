@@ -20,6 +20,11 @@ public enum CustomFieldClearScript {
     Clear_fourth_ludipq_crack_enter("fourth_ludipq_crack_enter", 922010404), // Ludi PQ Dimensional crack
     Clear_fifth_ludipq_crack_enter("fifth_ludipq_crack_enter", 922010405), // Ludi PQ Dimensional crack
     Clear922030400("clear_922030400", 922030400), // Cygnus 3rd job adv
+    MushroomCastleGate("clear_mushroom_castle_gate",
+            106031200, 106031201, 106031202, 106031203, 106031204,
+            106031205, 106031206, 106031207, 106031208, 106031209),
+    MushroomCastleBoss("clear_mushroom_castle_boss",
+            106030800, 106030801, 106030802, 106030803, 106030804),
     ;
 
     private final String scriptName;

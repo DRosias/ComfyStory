@@ -44,8 +44,8 @@ if not exist "%SERVER_JAR%" (
 
 echo Starting ComfyStory from %CD%...
 echo Using Java %COMFYSTORY_JAVA_VERSION% from %COMFYSTORY_SERVER_JAVA%.
-echo Press Ctrl+C to stop the server.
-echo If asked to terminate the batch job, answer N and wait for "Shutdown complete".
+echo Type stop and press Enter to shut down the server safely.
+echo Ctrl+C is only a fallback; if asked to terminate the batch job, answer N.
 echo.
 "%COMFYSTORY_SERVER_JAVA%\bin\java.exe" -jar "%SERVER_JAR%"
 set "SERVER_EXIT=%ERRORLEVEL%"

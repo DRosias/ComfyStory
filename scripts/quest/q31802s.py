@@ -13,10 +13,7 @@ response = sm.sendAskYesNo("Please protect as may soldiers as you can! If you su
 if response:
     sm.setPlayerAsSpeaker()
     sm.sendNext("I'm ready to enter the Heliseum Reclamation HQ and hunt down my enemies.")
-elif response == 0:
-    #TODO
+    sm.startQuest(parentID)
+    sm.warpInstanceIn(401070000)
+else:
     sm.dispose()
-
-sm.startQuest(31802)
-sm.warpInstanceIn(401070000)
-sm.dispose()

@@ -1,3 +1,5 @@
 # 106030302
-sm.warp(106030102, 1)
-sm.dispose()
+if chr.hasQuestInProgress(30059):
+    sm.warp(106031200)
+else:
+    sm.warp(106030102, 1)

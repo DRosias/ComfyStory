@@ -1,4 +1,5 @@
-# 1822 - [Training Course] Agility test
+# 1823 - [Training Course] Agility Test
 
-#TODO make script GMS like
+sm.setSpeakerID(9075202)
+sm.sendNext("Agility Test course concluded.")
 sm.completeQuest(parentID)

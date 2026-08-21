@@ -1,4 +1,6 @@
-# id 3 (hide01), field 106031503
-sm.lockInGameUI(True, True)
+# Skip the carry sequence and always restore input/UI state.
+sm.lockInGameUI(False, True)
 sm.forcedInput(0)
-sm.sendDelay(500)
+if chr.hasQuestInProgress(30067):
+    sm.completeQuestNoCheck(30067)
+sm.warp(106030000)
